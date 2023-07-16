@@ -37,13 +37,13 @@ class MainActivity : AppCompatActivity() {
 
         usersViewModel.getUsers()
 
-        val items = mainViewModel.getItems()
+//        val items = mainViewModel.getItems()
         val composeView = binding.composeView
         composeView.setContent {
 
             // pass the view model to the composable function
             usersView(usersViewModel)
-            itemsView(mainViewModel, usersViewModel)
+//            itemsView(mainViewModel, usersViewModel)
         }
 //        adapter = ItemAdapter(viewModel.getItems())
 //        recyclerView.adapter = adapter
