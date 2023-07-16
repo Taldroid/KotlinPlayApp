@@ -13,9 +13,11 @@ class UsersRepository {
 
     private val TAG = UsersRepository::javaClass.name
 
-    val usersData : Flow<Users> = channelFlow {
-        val coroutineScope = CoroutineScope(Dispatchers.IO)
-        coroutineScope.launch {
+    fun getUsers(): Flow<Users> {
+
+        return channelFlow {
+            val coroutineScope = CoroutineScope(Dispatchers.IO)
+            coroutineScope.launch {
 //            while (true) {
                 Log.d(TAG, "Launch Fetch Started")
 
@@ -36,11 +38,12 @@ class UsersRepository {
                     }
                 }
 //            }
-            close()
-        }
+                close()
+            }
 
-        awaitClose {
-            // Perform any cleanup tasks if needed
+            awaitClose {
+                // Perform any cleanup tasks if needed
+            }
         }
     }
 }

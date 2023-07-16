@@ -41,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         val composeView = binding.composeView
         composeView.setContent {
 
+            // pass the view model to the composable function
+            usersView(usersViewModel)
             itemsView(mainViewModel, usersViewModel)
         }
 //        adapter = ItemAdapter(viewModel.getItems())
