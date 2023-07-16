@@ -1,5 +1,6 @@
 package com.elyeproj.networkaccessevolution
 
+import android.util.Log
 import com.google.gson.Gson
 import com.learn.kotlinplayapp.Users
 import okhttp3.Call
@@ -12,6 +13,8 @@ import java.io.IOException
 import java.time.Duration
 
 object Network {
+
+    val TAG = Network.javaClass.simpleName
     private val httpClient = OkHttpClient
             .Builder()
             .connectTimeout(Duration.ofSeconds(1L))
@@ -60,7 +63,8 @@ object Network {
         if (!response.isSuccessful) {
             return Result.NetworkError<T>("Error ${response.code}:${response.message}")
         }
-        val raw = "{body: " +response.body?.string() + "}"
+        val raw = "{users: " +response.body?.string() + "}"
+        Log.d(TAG, "Body:\n" + raw)
         val result = Result.NetworkResult(Gson().fromJson(raw, returnType))
         return result// Result.NetworkResult(result.toString())
     }

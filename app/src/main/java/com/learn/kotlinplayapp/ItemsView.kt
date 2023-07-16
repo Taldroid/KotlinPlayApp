@@ -13,5 +13,7 @@ fun itemsView(itemsViewModel: ItemsViewModel, usersViewModel: UsersViewModel) {
             composableItem(item = it)
         })}
 
-    usersViewModel.getUsers()
+//    CoroutineScope(LifecycleCoroutineScope().coroutineContext).launch {
+//        usersViewModel.getUsers()
+//    }
 }

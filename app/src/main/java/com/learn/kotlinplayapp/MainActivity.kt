@@ -7,8 +7,11 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.LifecycleCoroutineScope
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import com.learn.kotlinplayapp.databinding.ActivityMainBinding
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,9 +35,12 @@ class MainActivity : AppCompatActivity() {
         // Set the lifecycle owner to the activity to observe LiveData updates
         binding.lifecycleOwner = this
 
+        usersViewModel.getUsers()
+
         val items = mainViewModel.getItems()
         val composeView = binding.composeView
         composeView.setContent {
+
             itemsView(mainViewModel, usersViewModel)
         }
 //        adapter = ItemAdapter(viewModel.getItems())
