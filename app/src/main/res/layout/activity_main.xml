@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.learn.kotlinplayapp.ItemsViewModel" />
+            type="com.learn.kotlinplayapp.items.ItemsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

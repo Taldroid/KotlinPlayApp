@@ -7,11 +7,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.LifecycleCoroutineScope
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import com.learn.kotlinplayapp.databinding.ActivityMainBinding
-import kotlinx.coroutines.launch
+import com.learn.kotlinplayapp.items.ItemAdapter
+import com.learn.kotlinplayapp.items.ItemsViewModel
 
 class MainActivity : AppCompatActivity() {
 

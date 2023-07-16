@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 
-class UsersViewModel : ViewModel() {
+open class UsersViewModel : ViewModel() {
 
     val TAG = UsersViewModel::class.java.simpleName
     val usersRepository = UsersRepository()
@@ -26,7 +26,7 @@ class UsersViewModel : ViewModel() {
     init {
         getUsers()
     }
-    fun getUsers() {
+    open fun getUsers() {
 
         // TODO: how do I get the data to the UI? collect twice?
         // Simulate fetching items from a data source

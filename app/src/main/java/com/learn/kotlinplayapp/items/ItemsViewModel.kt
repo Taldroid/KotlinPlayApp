@@ -1,4 +1,4 @@
-package com.learn.kotlinplayapp
+package com.learn.kotlinplayapp.items
 
 import androidx.databinding.ObservableField
 import androidx.lifecycle.ViewModel

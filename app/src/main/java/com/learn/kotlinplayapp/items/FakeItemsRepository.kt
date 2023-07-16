@@ -1,6 +1,4 @@
-package com.learn.kotlinplayapp
-
-import android.util.EventLogTags
+package com.learn.kotlinplayapp.items
 
 class FakeItemsRepository {
 

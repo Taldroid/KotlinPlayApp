@@ -1,4 +1,4 @@
-package com.learn.kotlinplayapp
+package com.learn.kotlinplayapp.items
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
@@ -6,6 +6,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.learn.kotlinplayapp.items.Item
 
 @Composable
 fun composableItem(item: Item) {

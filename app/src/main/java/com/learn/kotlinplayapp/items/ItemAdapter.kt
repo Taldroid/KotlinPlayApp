@@ -1,10 +1,11 @@
-package com.learn.kotlinplayapp
+package com.learn.kotlinplayapp.items
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.learn.kotlinplayapp.R
 
 class ItemAdapter(private val items: List<Item>) : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
